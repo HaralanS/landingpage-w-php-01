@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>LandingPage</title>
+</head>
+<body>
+  <header id="home" class="nav">
+    <a href="#"><img class="logo" src="assets/img/img-perfil.png" alt="pizza logo"></a>
+      <button class="hamburger"></button>
+      <ul class="nav-list">
+        <li><a href="#home" onclick="remove()">Home</a></li>
+        <li><a href="#produto" onclick="remove()">Produto</a></li>
+        <li><a href="#autor" onclick="remove()">Sobre mim</a></li>
+        <li><a href="#contato" onclick="remove()">Contato</a></li>
+      </ul>
+  </header>
+  
+  <section class="home-container page-section">
+    <h1 class="section-title">Planilha Completa</h1>
+    <p class="p-home p-section">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus, placeat earum nulla delectus est aut consequatur voluptatibus eligendi in blanditiis quia labore aperiam aliquam repellendus commodi adipisci minima laborum.</p>
+    <a href="https://www.amazon.com.br/" target="_blank"><img class="img-produto" src="assets/img/images.jpg" alt=""></a>
+    
+    <a href="https://wa.me/5547999417662?text=Oi!%20Vim%20atraves%20do%20seu%20produto" target="_blank"><div class="whatts-button"><img src="assets/img/whatts.png" alt=""><p>WhattsApp</p></div></a>
+  </section>
+
+  <section id="produto" class="sobre-produto-container page-section">
+    <h2 class="section-title">Seu Produto</h2>
+    <p class="p-produto p-section">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus, placeat earum nulla delectus est aut consequatur voluptatibus eligendi in blanditiis quia labore aperiam aliquam repellendus commodi adipisci minima laborum.</p>
+    <a href="https://www.amazon.com.br/" target="_blank"><img class="img-produto" src="assets/img/images.jpg" alt=""></a>
+    <a href="https://wa.me/5547999417662?text=Oi!%20Vim%20atraves%20do%20seu%20produto" target="_blank"><div class="whatts-button"><img src="assets/img/whatts.png" alt=""><p>WhattsApp</p></div></a>
+  </section>
+  <section id="autor" class="sobre-autor-container page-section">
+    <h2 class="section-title">Sobre mim</h2>
+    <p class="p-autor p-section">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ducimus, placeat earum nulla delectus est aut consequatur voluptatibus eligendi in blanditiis quia labore aperiam aliquam repellendus commodi adipisci minima laborum.</p>
+    <a href="https://www.amazon.com.br/" target="_blank"><img class="img-produto" src="assets/img/images.jpg" alt=""></a>
+    <a href="https://wa.me/5547999417662?text=Oi!%20Vim%20atraves%20do%20seu%20produto" target="_blank"><div class="whatts-button"><img src="assets/img/whatts.png" alt=""><p>WhattsApp</p></div></a>
+  </section>
+  <section id="contato" class="contato-container page-section">
+    <h2 class="section-title">Contato</h2>
+    <p class="p-contato p-section">Entre em contato comigo atraves do email preenchendo o formulario ou atraves do <a class="whatts-link" href="https://wa.me/5547999417662?text=Oi!%20Vim%20atraves%20do%20seu%20produto" target="_blank">WhattsApp</a></p>
+    
+    <form method="POST" action="api/index.php">
+      <label for="name">Nome:</label>
+      <input id="name" name="name" type="text" required>
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required>
+      <label for="">Mensagem</label>
+      <textarea name="conteudo" required placeholder="Mensagem..." id="conteudo" cols="30" rows="10"></textarea>
+      <input type="hidden" name="_next" value="https://landingpagepreview.netlify.app/">
+      <button name="enviar" class="form-button" type="submit">Enviar</button>
+    </form>
+
+    <a href="https://wa.me/5547999417662?text=Oi!%20Vim%20atraves%20do%20seu%20produto" target="_blank"><div class="whatts-button"><img src="assets/img/whatts.png" alt=""><p>WhattsApp</p></div></a>
+  </section>
+  <div id="btn-top">
+    <i class="arrow up"></i>
+  </div>
+  <footer>
+    <ul class="footer-ul">
+      <a href=""></a>
+      <li><a href="https://www.instagram.com/" target="_blank"><img class="social-icon" src="assets/img/instagram-w-icon.png" alt=""></a></li>
+      <li><a href="https://www.facebook.com/" target="_blank"><img class="social-icon" src="assets/img/facebook-w-icon.png" alt=""></a></li>
+      <li><a href="https://twitter.com/home" target="_blank"><img class="social-icon"src="assets/img/twitter-w-icon.png" alt=""></a></li>
+    </ul>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
