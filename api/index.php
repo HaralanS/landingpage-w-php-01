@@ -1,16 +1,26 @@
 <?php
-if(!empty($_POST["enviar"])) {
-  $nome = $_POST["name"];
-  $email = $_POST["email"];
-  $assunto = "Contato pelo Site";
-  $conteudo = $_POST["conteudo"];
+	$to = "haralandev@gmail.com"; //destinário que receberá o e-mail
 
-  $enviarParaEmail = "email @ portal desenvolvedor . com";
-  $mailCabecalhos = "De: " . $nome . "<". $email .">\r\n";
-  if(mail($enviarParaEmail, $assunto , $conteudo, $mailCabecalhos)) {
-      $message = "Seu contato foi recebido com sucesso.";
-      $type = "Sucesso";
-  }
-}
-require_once "resposta.php";
-?>
+	$assunto = "Formulário do site";
+
+	$mensagem  = $_POST['message']; 
+	$mensagem .= "<hr>"; 
+	$mensagem .= "Enviado por: ".$_POST['name'];
+
+	$email = $_POST['email']; //remetente
+
+	$headers  = 'MIME-Version: 1.0';
+	$headers .= 'Content-type: text/html; charset=iso-8859-1';
+	$headers .= 'To: $to';
+	$headers .= 'From: $email';
+	$headers .= 'Reply-To: $email';
+	$headers .= 'X-Mailer: PHP/' . phpversion();
+
+
+	$status = mail($to, $assunto, $mensagem, $headers);
+
+	if($status==true){
+		print "Mensagem foi enviada com sucesso!";
+	}else{
+		print "Não foi possível enviar";
+	}
